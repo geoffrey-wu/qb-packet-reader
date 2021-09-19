@@ -4,19 +4,13 @@ const server = require('http').createServer(app);
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/static/tossups.html');
-});
-
-app.get('/getpacket', async (req, res) => {
-    var directory = './packets/' + req.query.directory + '/' + req.query.packetNumber + '.json';
-    var jsonfile = require(directory);
-    res.send(JSON.stringify(jsonfile));
+    res.sendFile(__dirname + '/redirect.html');
 });
 
 app.use(express.json());
 
 app.use((req, res) => {
-    res.sendFile(__dirname + req.url);
+    res.sendFile(__dirname + '/redirect.html');
 });
 
 server.listen(port, () => {
