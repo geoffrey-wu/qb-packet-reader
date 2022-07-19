@@ -48,7 +48,7 @@ function buzz() {
         let characterCount = document.getElementById('question').innerHTML.length;
         document.getElementById('question').innerHTML += questionTextSplit.join(' ');
         shift('totalCelerity', 1 - characterCount / document.getElementById('question').innerHTML.length);
-        document.getElementById('answer').innerHTML = 'ANSWER: ' + questions[currentQuestionNumber]['answer'];
+        document.getElementById('answer').innerHTML = 'ANSWER: ' + questions[currentQuestionNumber].answer_formatted;
         document.getElementById('buzz').innerHTML = 'Buzz';
         document.getElementById('next').innerHTML = 'Next';
 

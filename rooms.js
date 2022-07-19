@@ -115,7 +115,7 @@ function updateScore(roomName, userId, score) {
 }
 
 function checkAnswerCorrectness(roomName, givenAnswer, inPower, endOfQuestion) {
-    if (database.checkAnswerCorrectness(rooms[roomName].currentQuestion.answer, givenAnswer)) {
+    if (database.checkAnswerCorrectness(rooms[roomName].currentQuestion.answer_formatted, givenAnswer)) {
         return inPower ? 15 : 10;
     } else {
         return endOfQuestion ? 0 : -5;

@@ -302,7 +302,7 @@ function processAnswer(userId, username, givenAnswer, score) {
         } else {
             document.getElementById('question').innerHTML = currentQuestion.question;
         }
-        document.getElementById('answer').innerHTML = 'ANSWER: ' + currentQuestion.answer;
+        document.getElementById('answer').innerHTML = 'ANSWER: ' + currentQuestion.answer_formatted;
         document.getElementById('next').innerHTML = 'Next';
         document.getElementById('buzz').disabled = true;
     } else {
@@ -566,7 +566,7 @@ window.onload = () => {
                 document.getElementById('next').disabled = true;
             } else if (Object.keys(currentQuestion).length > 0) {
                 document.getElementById('question').innerHTML = data.currentQuestion.question;
-                document.getElementById('answer').innerHTML = 'ANSWER: ' + data.currentQuestion.answer;
+                document.getElementById('answer').innerHTML = 'ANSWER: ' + data.currentQuestion.answer_formatted;
             } else {
                 document.getElementById('next').innerHTML = 'Start';
                 document.getElementById('next').classList.remove('btn-primary');

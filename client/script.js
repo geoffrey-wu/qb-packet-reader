@@ -285,7 +285,7 @@ function createQuestionCard(question, packetNumber, questionNumber) {
     cardHeader.className = 'card-header';
     cardHeader.setAttribute('data-bs-toggle', 'collapse');
     cardHeader.setAttribute('data-bs-target', '#question-' + questionCounter);
-    cardHeader.innerHTML = question.answer;
+    cardHeader.innerHTML = question.answer_formatted;
     card.appendChild(cardHeader);
 
     let cardContainer = document.createElement('div');
